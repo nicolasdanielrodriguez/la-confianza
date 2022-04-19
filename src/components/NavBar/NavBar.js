@@ -1,6 +1,7 @@
 import React from 'react'
 import './NavBar.css'
 import Button from '@mui/material/Button';
+import CartWidget from '../CartWidget/CartWidget';
 
 
 
@@ -17,6 +18,7 @@ return (
             <li><a><Button variant="contained">Contacto</Button></a></li>
             
         </ul>    
+        <CartWidget/>
     </nav>
 )
 
