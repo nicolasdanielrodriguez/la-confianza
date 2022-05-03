@@ -12,7 +12,7 @@ const Img = styled('img')({
   maxHeight: '100%',
 });
 
-export default function ComplexGrid({item}) {
+export default function Item({item}) {
   return (
     <Paper
       sx={{
@@ -59,24 +59,3 @@ export default function ComplexGrid({item}) {
   );
 }
 
-
-
-
-
-
-
-/*const Item = ({nombre,precio,id,url}) => {
-  return (
-    <div>
-      <h3>{nombre}</h3>
-      <h5>{precio}</h5>
-      <p>{id}</p>
-      <img src= {url}/>
-
-
-    
-    </div>
-  )
-}
-
-export default Item*/

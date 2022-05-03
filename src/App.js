@@ -7,6 +7,7 @@ import ItemCount from './components/ItemCount';
 import Item from './components/Item/Item';
 import ComplexGrid from './components/Item/Item';
 import ListItem from './components/ListItem/ListItem';
+import ItemListContainer from './components/ItemListContainer';
 
 
 
@@ -22,7 +23,8 @@ function App() {
       <Body color='green'>Hola 2</Body>
       <Body color='red'>Hola 1</Body>
       <ItemCount stock='5' initial={1} onAdd= {onAdd}/>
-      <ListItem/>
+      <ItemListContainer/>
+     
     </div>
   );
 }
