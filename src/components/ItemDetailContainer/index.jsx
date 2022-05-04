@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import ItemList from '../ListItem/ListItem';
+import ItemDetail from '../ItemDetail';
 
-function getProducts() {
+function getItems() {
   const myPromise = new Promise((resolve, reject) => {
     const productsList = [
       {
@@ -9,18 +9,6 @@ function getProducts() {
         nombre: 'Fideos',
         precio: '$150',
         url: './assets/fideos.png'
-      },
-      {
-        id: 2,
-        nombre: 'Agnolotti',
-        precio: '$600',
-        url: './assets/Agnolotti.png'
-      },
-      {
-        id: 3,
-        nombre: 'Ravioles',
-        precio: '$350',
-        url: './assets/ravioles.png'
       }
     ];
     setTimeout(() => {
@@ -30,25 +18,24 @@ function getProducts() {
   return myPromise;
 }
 
-function ItemListContainer() {
+function ItemDetailContainer() {
 
 
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    getProducts()
+    getItems()
       .then(res => {
         setProducts(res);
       })
   }, []);
-  console.log({products})
-
+console.log ({products})
   return (
-    <div className='list-item-container'>
-      <ItemList items={products} />
+    <div>
+      <ItemDetail items={products}/>
        
     </div>
   )
 }
 
-export default ItemListContainer
+export default ItemDetailContainer
