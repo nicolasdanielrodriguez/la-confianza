@@ -9,22 +9,22 @@ import ComplexGrid from './components/Item/Item';
 import ListItem from './components/ListItem/ListItem';
 import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer';
-
+import Home from './pages/Home';
+import Catalogo from './pages/Catálogo';
+import Detalle from './pages/Detalle';
+import {Routes , Route, Link} from 'react-router-dom'
 
 
 
 
 function App() {
-  function onAdd (){
-    console.log ("Su compra ha ingresado")
-  }
+  
   return (
     <div className="App">
-      <NavBar/>
-      <Body color='green'>Hola 2</Body>
-      <Body color='red'>Hola 1</Body>
-      <ItemCount stock='5' initial={1} onAdd= {onAdd}/>
-      <ItemDetailContainer/>
+     
+     
+     <NavBar/>
+     
      
 
      
