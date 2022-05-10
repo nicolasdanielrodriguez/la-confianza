@@ -1,14 +1,19 @@
 import React from 'react'
 
-function ItemDetail(items) {
+function ItemDetail({ product }) {
+  
+  
+  const { nombre, id, precio, url } = product;
+  console.log("product en Detail", product);
   return (
-      <>
-      <h1>{items.nombre}</h1>
-      <p>{items.id}</p>
-        <p>{items.precio}</p>
-        <img src={items.url} alt="" />
-        </>
-  )
+    <>
+      
+      <h1>{nombre}</h1>
+      <p>{id}</p>
+      <p>{precio}</p>
+      <img src={url} alt="" />
+    </>
+  );
 }
 
 export default ItemDetail

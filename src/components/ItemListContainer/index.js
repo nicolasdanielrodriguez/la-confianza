@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import ItemList from '../ListItem/ListItem';
+import ItemDetail from '../ItemDetail';
+import ItemList from '../ItemList/ItemList';
+import ListItem from '../ItemList/ItemList';
 
 function getProducts() {
   const myPromise = new Promise((resolve, reject) => {
@@ -45,8 +47,8 @@ function ItemListContainer() {
 
   return (
     <div className='list-item-container'>
-      <ItemList items={products} />
-       
+      <ItemList items={products}/>
+      
     </div>
   )
 }
