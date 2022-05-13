@@ -19,7 +19,7 @@ return (
     <button>clickeado {count} vez o veces</button>
     <button onClick={()=> handlePlusButton ()}>+</button>
     <button onClick={()=> handleMinusButton()}>-</button>
-    <button onClick={() => (count <= stock) && onAdd }> Agregar al carrito</button> 
+    <button onClick={() => (count <= stock) && onAdd (count) }> Agregar al carrito</button> 
     </>
   )
 }

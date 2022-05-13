@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import CartContext from '../CartContext';
 import ItemDetail from '../ItemDetail';
 import ItemList from '../ItemList/ItemList';
 import ListItem from '../ItemList/ItemList';
@@ -32,11 +33,17 @@ function getProducts() {
   return myPromise;
 }
 
+
+/*
+useEffect(() => {
+console.log(CrtCtx.products)
+}, [])*/
+
 function ItemListContainer() {
 
 
   const [products, setProducts] = useState([]);
-
+ 
   useEffect(() => {
     getProducts()
       .then(res => {
@@ -47,9 +54,9 @@ function ItemListContainer() {
 
   return (
     <div className='list-item-container'>
-      <ItemList items={products}/>
-      
+      <ItemList items={products}/> 
     </div>
+
   )
 }
 

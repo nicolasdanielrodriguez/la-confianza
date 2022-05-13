@@ -14,8 +14,9 @@ return (
         </div>
         <ul className="ulNavBar">    
             <li><Link to={'/'}><Button variant="contained">HOME</Button></Link></li>
-            <li><Link to={'/category/:categoryId'}><Button variant="contained">Categorías</Button></Link></li>
-            <li><Link to={'/item/:id'}><Button variant="contained">Items</Button></Link></li>
+            <li><Link to={'/category'}><Button variant="contained">Categorías</Button></Link></li>
+            <li><Link to={'/item'}><Button variant="contained">Items</Button></Link></li>
+            <li><Link to={'/cart'}><Button variant="contained">Cart</Button></Link></li>
         </ul>    
         <CartWidget/>
         

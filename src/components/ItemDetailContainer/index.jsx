@@ -1,6 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState} from 'react';
+import {Link} from 'react-router-dom'
 import ItemCount from '../ItemCount';
 import ItemDetail from '../ItemDetail';
+import Button from '@mui/material/Button';
+
 
 function getItems() {
   const myPromise = new Promise((resolve, reject) => {
@@ -20,8 +23,10 @@ function getItems() {
 }
 
 function ItemDetailContainer() {
+  
+  
   const [cantidadproductos, setcantidadproductos] = useState (null)
-  function addHandler (quantityToAdd) {
+  function AddHandler (quantityToAdd) {
     setcantidadproductos (quantityToAdd)
   }
 
@@ -38,9 +43,16 @@ function ItemDetailContainer() {
       {oneProduct.map((product) => {
         return <ItemDetail key={product.id} product={product} />;
       })}
-      <ItemCount stock='5' initial={0} onAdd={addHandler}/>
+      
+        <ItemCount stock='5' initial={0} onAdd={AddHandler}/>
+        <Link to={'/cart'}><button>Tenes {cantidadproductos} productos en el carrito</button></Link>
+       
+        
+      
     </>
   );
+
+
 }
 
 export default ItemDetailContainer;
