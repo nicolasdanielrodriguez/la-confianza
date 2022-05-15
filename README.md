@@ -1,3 +1,13 @@
+Proyecto La Confianza
+
+La confianza es una fábrica de pastas de mi familia que inicio mi abuelo, por eso decidí realizar un proyecto al respecto.
+
+Respecto al diseño decidí apoyarme en Mui Material, ya que me parecía correcto usar una librería propia de REACT en el proyecto.
+
+En relación a la organización de la página queda pendiente complementar mayor cantidad de productos para incorporar robustez al proyecto.
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

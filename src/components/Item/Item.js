@@ -4,6 +4,7 @@ import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import ButtonBase from '@mui/material/ButtonBase';
+import { Link } from 'react-router-dom';
 
 const Img = styled('img')({
   margin: 'auto',
@@ -44,7 +45,7 @@ export default function Item({item}) {
             </Grid>
             <Grid item>
               <Typography sx={{ cursor: 'pointer' }} variant="body2">
-                Comprar
+                <Link to={'/item/' + item?.id}> Ver Detalle </Link>
               </Typography>
             </Grid>
           </Grid>

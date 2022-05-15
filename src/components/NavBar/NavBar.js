@@ -2,10 +2,7 @@ import React from 'react'
 import './NavBar.css'
 import Button from '@mui/material/Button';
 import CartWidget from '../CartWidget/CartWidget';
-import {Routes , Route, Link} from 'react-router-dom'
-import Catalogo from '../../pages/Catálogo';
-import Home from '../../pages/Home';
-import Detalle from '../../pages/Detalle';
+import {Routes , Route, Link, NavLink} from 'react-router-dom'
 export default function NavBar (){
 return (
     <nav>
@@ -13,10 +10,10 @@ return (
             <Link to={'/'}><img class="logoContainer" src={process.env.PUBLIC_URL + "assets/logo.png"} alt="logo"/></Link>
         </div>
         <ul className="ulNavBar">    
-            <li><Link to={'/'}><Button variant="contained">HOME</Button></Link></li>
-            <li><Link to={'/category'}><Button variant="contained">Categorías</Button></Link></li>
-            <li><Link to={'/item'}><Button variant="contained">Items</Button></Link></li>
-            <li><Link to={'/cart'}><Button variant="contained">Cart</Button></Link></li>
+            <li><NavLink to={'/'}><Button variant="contained">HOME</Button></NavLink></li>
+            <li><NavLink to={'/category/Simples'}><Button variant="contained">Simples</Button></NavLink></li>
+            <li><NavLink to={'/category/Rellenas'}><Button variant="contained">Rellenas</Button></NavLink></li>
+            <li><NavLink to={'/cart'}><Button variant="contained">Cart</Button></NavLink></li>
         </ul>    
         <CartWidget/>
         
