@@ -1,26 +1,32 @@
 import React, { useState } from 'react'
 
 
-export default function ({stock,initial, onAdd}) {
-const [count,setcount] = useState (initial)  
-function handlePlusButton (){
-  if (count < stock){
-    setcount (count+1)
+function ItemCount({ stock, initial, onAdd }) {
+  const [count, setCount] = useState(initial);
+
+  function handlePlusButton() {
+      if (count < stock) {
+          setCount(count + 1);
+      }
   }
+
+  function handleMinusButton() {
+      if (count > 0) {
+          setCount(count - 1)
+      }
   }
-function handleMinusButton (){
-if (count > 0){
-  setcount (count-1)
-}
-}
-return (
-      <>
-    <p>El stock es de {stock} </p>
-    <button>clickeado {count} vez o veces</button>
-    <button onClick={()=> handlePlusButton ()}>+</button>
-    <button onClick={()=> handleMinusButton()}>-</button>
-    <button onClick={() => (count <= stock) && onAdd (count) }> Agregar al carrito</button> 
-    </>
+
+  return (
+      <div className='item-count-container'>
+          <div>
+              <button onClick={() => handleMinusButton()}>-</button>
+              <input readOnly value={count} />
+              <button onClick={() => handlePlusButton()}>+</button>
+          </div>
+          <button onClick={() => (count <= stock) && onAdd(count)}>Agregar al carrito</button>
+      </div>
   )
 }
+
+export default ItemCount
  

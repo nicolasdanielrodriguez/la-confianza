@@ -13,18 +13,15 @@ function App() {
   return (
     <div className="App">
     <CartContexProvider>
-     <NavBar/>
-     <Routes>
+      <NavBar/>
+      <Routes>
             <Route path='/' element={<ItemListContainer/>}/>
             <Route path='/category/:categoryId' element={<ItemListContainer/>}/>
             <Route path='/item/:id' element={<ItemDetailContainer/>}/>
             <Route path='/cart' element={<Cart/>}/>
-        </Routes>
-        </CartContexProvider>
+      </Routes>
+    </CartContexProvider>
     </div>
   );
 }
 export default App;
-
-
-//<Item nombre='Agnolottis' id= '1' precio= '$190'/>

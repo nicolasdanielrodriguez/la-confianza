@@ -53,9 +53,9 @@ function ItemDetailContainer() {
   }, [id]);
   return (
     <>
-        <ItemDetail product={oneProduct} />
-        <ItemCount stock='5' initial={0} onAdd={AddHandler}/>
-        <Link to={'/cart'}><button>Tenes {cantidadproductos} productos en el carrito</button></Link>
+        <ItemDetail item={oneProduct} />
+       
+       
     </>
   );
 }
