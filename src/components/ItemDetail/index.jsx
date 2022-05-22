@@ -3,6 +3,8 @@ import CartContext from '../CartContext';
 import { useContext} from 'react';
 import { Link } from 'react-router-dom';
 import ItemCount from '../ItemCount';
+import './Design.css'
+
 
 
 
@@ -16,14 +18,14 @@ function ItemDetail({ item }) {
   return (
   <div>
       <div>
-          <div>
-              <img src={ item?.url } alt='Imagen del producto' />
+          <div className="itemDetail-img">
+              <img src={ item.url } alt='Imagen del producto' />
           </div>
       </div>
       <div className='right'>
           <div className='info-container'>
               <h2>{ item?.nombre }</h2>
-              <p>{ item?.precio }</p>
+              <p>${ item?.precio }</p>
               <div>
                   <ItemCount stock={5} initial={0} onAdd={addHandler}/>
                   <button onClick={() => console.log(cartCtx.products)} >Imprimir carrito</button>

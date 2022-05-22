@@ -11,21 +11,21 @@ function getProducts(category) {
       {
         id: 1,
         nombre: 'Fideos',
-        precio: '$150',
+        precio: 150,
         url: './assets/fideos.png',
         category: 'Simples',
       },
       {
         id: 2,
         nombre: 'Agnolotti',
-        precio: '$600',
+        precio: 600,
         url: './assets/Agnolotti.png',
         category: 'Rellenas'
       },
       {
         id: 3,
         nombre: 'Ravioles',
-        precio: '$350',
+        precio: 350,
         url: './assets/ravioles.png',
         category: 'Rellenas'
       }

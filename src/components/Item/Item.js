@@ -5,6 +5,8 @@ import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import ButtonBase from '@mui/material/ButtonBase';
 import { Link } from 'react-router-dom';
+import {useContext} from 'react'
+import CartContext from '../../components/CartContext';
 
 const Img = styled('img')({
   margin: 'auto',
@@ -14,6 +16,8 @@ const Img = styled('img')({
 });
 
 export default function Item({item}) {
+  const cartCtx = useContext(CartContext);
+
   return (
     <Paper
       sx={{
@@ -47,12 +51,13 @@ export default function Item({item}) {
               <Typography sx={{ cursor: 'pointer' }} variant="body2">
                 <Link to={'/item/' + item?.id}> Ver Detalle </Link>
                 Cantidad acumulada {item.quantity}
+                <button onClick={() => cartCtx.removeProduct(item.id)} >Remove product</button>
               </Typography>
             </Grid>
           </Grid>
           <Grid item>
             <Typography variant="subtitle1" component="div">
-              {item.precio}
+              ${item.precio}
             </Typography>
           </Grid>
         </Grid>

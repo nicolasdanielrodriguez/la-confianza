@@ -14,7 +14,7 @@ const CartWidget = () => {
             
           <button>
               <ShoppingCartIcon/>
-              
+              {cartCtx.getCartQuantity()}
           </button>
         
             

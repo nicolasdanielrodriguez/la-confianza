@@ -45,6 +45,14 @@ export const CartContexProvider = ({children}) =>{
             return total + value.quantity
         }, 0)
     }
+
+    
+    const getTotalPrice = () => {
+        return productList.reduce((total, value) => {
+            return total + value.quantity*value.precio
+        }, 0)
+    }
+    
   
     return (
         <CartContext.Provider value={{
@@ -54,6 +62,7 @@ export const CartContexProvider = ({children}) =>{
             clear,
             isInCart,
             getCartQuantity,
+            getTotalPrice,
         }}>
             {children}
         </CartContext.Provider>
