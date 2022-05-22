@@ -46,6 +46,7 @@ export default function Item({item}) {
             <Grid item>
               <Typography sx={{ cursor: 'pointer' }} variant="body2">
                 <Link to={'/item/' + item?.id}> Ver Detalle </Link>
+                Cantidad acumulada {item.quantity}
               </Typography>
             </Grid>
           </Grid>
