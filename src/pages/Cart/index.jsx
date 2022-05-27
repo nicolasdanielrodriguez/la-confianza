@@ -1,5 +1,5 @@
 import React, {useContext} from 'react'
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import CartContext from '../../components/CartContext';
 import ItemList from '../../components/ItemList/ItemList';
 
@@ -13,7 +13,7 @@ function Cart() {
     {cartCtx.products.length !== 0 ?
     <div>
         <ItemList items={cartCtx.products}/>
-          <button>Terminar compra por ${cartCtx.getTotalPrice()}</button> 
+          <Link to={'/checkout'}><button>Terminar compra por ${cartCtx.getTotalPrice()}</button></Link> 
           </div> :
           <>
           <h2>No hay productos</h2>
