@@ -51,7 +51,7 @@ export default function Item({item}) {
               <Typography sx={{ cursor: 'pointer' }} variant="body2">
                 <Link to={'/item/' + item?.id}> Ver Detalle </Link>
                 Cantidad acumulada {item.quantity}
-                <button onClick={() => cartCtx.removeProduct(item.id)} >Remove product</button>
+                <button onClick={() => cartCtx.removeProduct(item.id)} >Quitar producto</button>
               </Typography>
             </Grid>
           </Grid>
